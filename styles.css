@@ -1,0 +1,97 @@
+body {
+    background-image: url("https://media.istockphoto.com/id/1489370084/vector/xoxo-colorful-seamless-pattern.jpg?s=612x612&w=0&k=20&c=-Snmdmr0KKaKyH4SHGV4QiN-PS2G1zOh2M26c5a0CAQ=");
+    background-size: cover;
+}
+
+.game-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    width: 300px;
+    margin: 40px auto;
+}
+
+.cell {
+    background-color: #f0f0f0;
+    padding: 40px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.cell:hover {
+    background-color: #ddd;
+}
+
+.game-controls {
+    margin-top: 20px;
+}
+
+#game-result {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+    animation: result-animation 2s;
+}
+
+@keyframes result-animation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.win-animation {
+    animation: win-animation 2s;
+}
+
+@keyframes win-animation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.lose-animation {
+    animation: lose-animation 2s;
+}
+
+@keyframes lose-animation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.8);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.draw-animation {
+    animation: draw-animation 2s;
+}
+
+@keyframes draw-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
